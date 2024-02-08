@@ -1,10 +1,19 @@
 import ProductRow from "./ProductRow";
 
-function ProductTable() {
+function ProductTable(props) {
   return (
     <div>
-      <h1>nihat algan</h1>
-      <ProductRow />
+      <table>
+        <tbody>
+          <tr>
+            <th></th>
+            <th>Name</th>
+            <th>Price</th>
+          </tr>
+
+          <ProductRow product={props.product} />
+        </tbody>
+      </table>
     </div>
   );
 }

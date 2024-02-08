@@ -10,8 +10,9 @@ function ProductsPage() {
     <div>
       <h1>IronStore</h1>
       <SearchBar />
-
-      <ProductTable />
+      {products.map((productData) => {
+        return <ProductTable key={productData.id} product={productData} />;
+      })}
     </div>
   );
 }

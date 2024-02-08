@@ -1,33 +1,18 @@
-function ProductRow() {
+function ProductRow(props) {
+  function checkStock(stock) {
+    if (!stock) {
+      return <span className="red">{props.product.name}</span>;
+    } else {
+      return <span className="black">{props.product.name}</span>;
+    }
+  }
   return (
-    <div>
-      <h1>nihat burak algan</h1>
-      <table>
-        <tbody>
-          <tr>
-            {/* <th>Picture</th> */}
-            <th>Name</th>
-            <th>Price</th>
-          </tr>
-          {/* {people.map((person) => {
-            return (
-              <tr key={person.id}>
-                <td>
-                  <img id="actor_img" src={person.pictureUrl} />
-                </td>
-                <td>{person.name}</td>
-                <td>{person.popularity}</td>
-                <td>{person.wonOscar && <p>🏆</p>}</td>
-              
-              </tr>
-            );
-          })} */}
-          <th>ProductRow</th>
-          <th>x</th>
-          <th>y</th>
-        </tbody>
-      </table>
-    </div>
+    <tr>
+      <th>ProductRow</th>
+      <th>{checkStock(props.product.inStock)}</th>
+
+      <th>{props.product.price}</th>
+    </tr>
   );
 }
 

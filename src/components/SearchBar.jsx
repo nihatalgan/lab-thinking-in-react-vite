@@ -1,9 +1,5 @@
 function SearchBar() {
-  return (
-    <div>
-      <h1>burak algan</h1>
-    </div>
-  );
+  return <div></div>;
 }
 
 export default SearchBar;
