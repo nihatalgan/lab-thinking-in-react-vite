@@ -10,8 +10,9 @@ function ProductTable(props) {
             <th>Name</th>
             <th>Price</th>
           </tr>
-
-          <ProductRow product={props.product} />
+          {props.product.map((productData) => {
+            return <ProductRow key={productData.id} product={productData} />;
+          })}
         </tbody>
       </table>
     </div>
