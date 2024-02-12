@@ -4,12 +4,17 @@ function SearchBar(props) {
     props.filterProducts(e.target.value);
   };
 
+  const handleCheck = (e) => {
+    // console.log(e.target.checked);
+    props.checkProducts(e.target.checked);
+  };
+
   return (
     <div>
       <div>search</div>
       <input onChange={handleSelect}></input>
       <div>
-        <input type="checkbox"></input>
+        <input type="checkbox" onChange={handleCheck}></input>
         <p>Only show products in stock</p>
       </div>
     </div>
